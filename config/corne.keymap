@@ -48,7 +48,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp ESC
    &kp LSHFT &kp A &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &tp LC(LS(LALT)) SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
-          &tp LALT LGUI  &mo 1   &kp SPACE        &tp LALT RET   &mo 2    &kp BSPC
+          &tp LALT LGUI  &kp SPACE  &mo 1          &mo 2   &tp LALT RET   &kp BSPC
                         >;
                 };
 
@@ -61,8 +61,8 @@
                         bindings = <
    &kp ESC    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp N6     &kp N7    &kp N8          &kp N9   &kp N0    &kp GRAVE
    &trans     &kp Q    &kp W  &kp E    &kp R    &kp T       &kp UNDER  &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE  &kp RSHFT
-   &kp LSHFT  &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS  &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH  &kp RSHFT
-                         &kp LGUI  &trans    &kp SPACE     &tp LALT RET &trans &kp DEL 
+   &trans     &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS  &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH  &kp RSHFT
+                         &kp LALT   &kp SPACE &trans       &trans  &tp LALT RET &kp DEL 
                         >;
                 };
 
@@ -76,22 +76,22 @@
    &kp C_PREV     &kp EXCL      &kp AT       &kp HASH      &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR    &kp RPAR    &kp C_NEXT  
    &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2  &kp C_VOL_DN &kp C_VOL_UP    &kp LEFT   &kp DOWN  &kp UP          &kp RIGHT   &kp HOME    &kp END
    &kp F12        &kp F1        &kp F2       &kp F3       &kp F4       &kp F5           &kp F6     &kp F7    &kp F8          &kp F9      &kp F10     &kp F11
-                          	                        &trans   &trans   &trans        &kp C_PP   &trans    &tog LOWER
+                          	                        &trans   &trans   &trans        &trans &kp C_PP   &tog ADJUST
                         >;
                 };
 
 
          adjust_layer  {
 // -----------------------------------------------------------------------------------------
-// |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
-// |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
-// | SHFT |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
+// | ESC |  1  |  2  |  3  |  4  |    5     |   |  6  |  7  |  8  |  9  | 0   | `~   |
+// |     |  Q  |  W  |  E  |  R  |    T     |   |  _  |  +  |  {  |  }  | "|" | SHFT |
+// |     |  A  |  S  |  D  |  F  |    G     |   |  -  |  =  |  [  |  ]  |  \  | SHFT |
 //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
                         bindings = <
-   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET  &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSLH
-   &trans    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp MINUS  &kp EQUAL &kp GRAVE       &kp LBKT &kp RBKT &kp PIPE
-   &kp LSHFT &kp N6   &kp N7 &kp N8   &kp N9   &kp N0      &kp UNDER  &kp PLUS  &kp TILDE       &kp LBRC &kp RBRC &kp RSHFT
-                         &kp LGUI &trans  &tp LALT RET     &tp LC(LS(LA(LGUI))) SPACE &kp BSPC  &trans
+   &kp ESC    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp N6     &kp N7       &kp N8          &kp N9   &kp N0    &kp GRAVE
+   &trans     &kp Q    &kp W  &kp E    &kp R    &kp T       &kp UNDER  &kp PLUS     &kp LBRC        &kp RBRC &kp PIPE  &kp RSHFT
+   &trans     &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS  &kp EQUAL    &kp LBKT        &kp RBKT &kp BSLH  &kp RSHFT
+                         &kp LALT   &kp SPACE   &kp TAB     &trans     &mo 1    &tog ADJUST
                         >;
                 };
 
