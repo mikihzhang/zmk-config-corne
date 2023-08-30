@@ -15,16 +15,27 @@
 
 / {
         behaviors {
-          tp: tap_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_PREFERRED";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-          }; 
-        };
+                tp: tap_preferred {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "TAP_PREFERRED";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <150>;
+                    quick-tap-ms = <0>;
+                    flavor = "tap-preferred";
+                    bindings = <&kp>, <&kp>;
+                  }; 
+                };
+
+        behaviors {
+            mo_tog: behavior_mo_tog {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "mo_tog";
+                    #binding-cells = <2>;
+                    flavor = "hold-preferred";
+                    tapping-term-ms = <200>;
+                    bindings = <&mo>, <&tog>;
+                };
+            };
 
   // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
@@ -48,7 +59,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp ESC
    &kp LSHFT &kp A &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &tp LC(LS(LALT)) SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
-          &tp LALT LGUI  &kp SPACE  &mo 1          &mo 2   &tp LALT RET   &kp BSPC
+          &tp LALT LGUI  &kp SPACE  &mo 1          &mo_tog 2 2   &tp LALT RET   &kp BSPC
                         >;
                 };
 
