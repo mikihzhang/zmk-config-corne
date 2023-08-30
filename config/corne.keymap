@@ -101,7 +101,7 @@
                         bindings = <
    &kp ESC    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR    
    &trans     &kp Q    &kp W  &kp E    &kp R    &kp T       &kp UNDER      &kp PLUS        &kp LBRC        &kp RBRC      &kp PIPE      &kp RSHFT
-   &trans     &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT      &kp BSLH      &kp RSHFT
+   &kp LCTRL  &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT      &kp BSLH      &kp RSHFT
                          &kp LALT   &kp SPACE   &kp TAB     &trans     &mo 1    &mo 0
                         >;
                 };
