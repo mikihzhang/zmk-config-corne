@@ -56,10 +56,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |    B    |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &kp ESC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P   &kp BSPC
    &kp LSHFT &kp A &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &kp SEMI &tp LC(LS(LALT)) SQT
    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
-          &tp LALT LGUI  &kp SPACE  &mo_tog 1 1          &mo_tog 2 2   &tp LALT RET   &kp BSPC
+          &tp LALT LGUI  &kp SPACE  &mo_tog 1 1          &mo_tog 2 2   &tp LALT RET    &kp ESC
                         >;
                 };
 
@@ -79,15 +79,15 @@
 
                 raise_layer  {
 // -----------------------------------------------------------------------------------------
-// |  F12  |  F1  |  F2  |  F3  |  F4  |  F5 |            | F6  | F7  | F8  | F9  | F10 |  F11  |
-// |       | PREV | NEXT | Vol- | Vol+ | Play/Pause  |    | LFT | DWN |  UP | RGT | HOME|  END  |
-// |  F12  |  F1  |  F2  |  F3  |  F4  |  F5 |            | F6  | F7  | F8  | F9  | F10 |  F11  |
-//                    |     |     |    |                  |   Play/Pause   |     |     |
+// |  F12  |  F1  |  F2  |  F3  |  F4  |  F5 |            | HOME   | PG_DN    | PG_UP    | END      | K_APP       |  ESC    | 
+// |  F11  |  F6  | F7   | F8   | F9   | F10 |            | LFT    | DWN      |  UP      | RGT      | HOME        |  END    |
+// | BTCLR | BT1  | BT2  | BT3  | BT4  | BT5 |            | C_MUTE | C_VOL_DN | C_VOL_UP | C_PREV   | C_NEXT      | Play/Pause  |
+//                    |     |     |    |                  |      |     |     |
                         bindings = <
-   &kp F12        &kp F1         &kp F2        &kp F3        &kp F4         &kp F5           &kp F6     &kp F7       &kp F8        &kp F9      &kp F10     &kp F11
-   &trans         &kp C_PREV     &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PP         &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT   &kp HOME    &kp END
-   &kp F12        &kp F1         &kp F2        &kp F3        &kp F4         &kp F5           &kp F6     &kp F7       &kp F8        &kp F9      &kp F10     &kp F11
-                          	                        &trans    &trans    &trans           &trans     &kp C_MUTE   &tog 0
+ &kp F12        &kp F1          &kp F2         &kp F3         &kp F4         &kp F5                &kp HOME         &kp PG_DN         &kp PG_UP        &kp END        &kp K_APP      &kp ESC
+ &kp F11        &kp F6         &kp F7          &kp F8         &kp F9         &kp F10               &kp LEFT         &kp DOWN          &kp UP           &kp RIGHT      &kp HOME       &kp END
+ &bt BT_CLR     &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4          &kp C_MUTE       &kp C_VOL_DN      &kp C_VOL_UP     &kp C_PREV     &kp C_NEXT     &kp C_PP 
+                          	                        &trans    &trans    &trans                 &trans      &trans    &tog 0
                         >;
                 };
 
@@ -99,9 +99,9 @@
 // |     |  A  |  S  |  D  |  F  |    G     |   |  -  |  =  |  [  |  ]  |  \  | SHFT |
 //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
                         bindings = <
-   &kp ESC    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR    
-   &trans     &kp Q    &kp W  &kp E    &kp R    &kp T       &kp UNDER      &kp PLUS        &kp LBRC        &kp RBRC      &kp PIPE      &kp RSHFT
-   &kp LCTRL  &kp A    &kp S  &kp D    &kp F    &kp G       &kp MINUS      &kp EQUAL       &kp LBKT        &kp RBKT      &kp BSLH      &kp RSHFT
+   &kp ESC    &kp N1   &kp N2 &kp N3   &kp N4   &kp N5      &kp Y          &kp U            &kp I           &kp O         &kp P         &kp BSPC  
+   &trans     &kp Q    &kp W  &kp E    &kp R    &kp T       &kp UNDER      &kp PLUS         &kp LBRC        &kp RBRC      &kp PIPE      &kp RSHFT
+   &kp LCTRL  &kp A    &kp S  &kp D    &kp F    &kp G       &kp B          &kp EQUAL        &kp LBKT        &kp RBKT      &kp BSLH      &kp RSHFT
                          &kp LALT   &kp SPACE   &kp TAB     &trans     &mo 1    &mo 0
                         >;
                 };
